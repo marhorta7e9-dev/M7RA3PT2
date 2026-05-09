@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 930db39b076b34988b920011730c4cc3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - TextOrbs: {instanceID: 0}
+  - TextCoin: {instanceID: 0}
+  - _pauseMenu: {instanceID: 0}
+  - _playerSO: {fileID: 11400000, guid: 82e0f964136fa4107a092a876a8bd224, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
