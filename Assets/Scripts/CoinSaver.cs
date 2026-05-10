@@ -19,7 +19,11 @@ public class CoinSaver : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        if (PlayerPrefs.HasKey("wine" + ID) && PlayerPrefs.GetInt("wine" + ID) == 1)
+        if (PlayerPrefs.HasKey("Wine" + ID) && PlayerPrefs.GetInt("Wine" + ID) == 1)
+        {
+            gameObject.SetActive(false);
+        }
+       if (PlayerPrefs.HasKey("Lives" + ID) && PlayerPrefs.GetInt("Lives" + ID) == 1)
         {
             gameObject.SetActive(false);
         }
@@ -32,12 +36,31 @@ public class CoinSaver : MonoBehaviour
 
         // Marquem AQUESTA moneda com a recollida (1 = recollida)
         if (GetComponent<Coin>() != null)
+        {
             PlayerPrefs.SetInt("Coins" + ID, 1);
+            GameManager.gamemanager.CoinCollected(1);
+        }
         if (GetComponent<Orbe>() != null)
+        {
             PlayerPrefs.SetInt("Orbs" + ID, 1);
-        // Afegir aquí altres tipus si cal (wine, etc.)
-
-        PlayerPrefs.Save();
+            GameManager.gamemanager.OrbCollected(1);
+        }
+        PlayerPrefs.SetInt("Wine" + ID, 1);
+        GameManager.gamemanager.WineCollected(1);
+        PlayerPrefs.SetInt("Lives" + ID, 1);
+        GameManager.gamemanager.LivesCollected(1);
+        /*if (GetComponent<Wine>() != null)
+        {
+            PlayerPrefs.SetInt("Wine" + ID, 1);
+            GameManager.gamemanager.WineCollected(1);
+        }
+ 
+        if (GetComponent<Lives>() != null)
+        {
+            PlayerPrefs.SetInt("Lives" + ID, 1);
+            GameManager.gamemanager.LivesCollected(1);
+        }*/
+        PlayerPrefs.Save();//
     }
 }
 

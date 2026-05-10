@@ -24,7 +24,7 @@ public class PlayerController2526 : MonoBehaviour
     public float _vertical;
     public float _horizontal;
 
-    public bool inWater;
+    //public bool inWater;
 
     private float _coyoteTime = 0.4f;
     private float _jumpingTime = 0f;
@@ -134,7 +134,7 @@ public class PlayerController2526 : MonoBehaviour
     {
 
         _animator.SetBool("Grounded", !jumping && (_controller.isGrounded || _timeSinceGrounded < _coyoteTime));
-        _animator.SetBool("InWater", inWater);
+        //_animator.SetBool("InWater", inWater);
 
         if (_controller.isGrounded)
         {
@@ -163,7 +163,7 @@ public class PlayerController2526 : MonoBehaviour
     {
 
         if (slope) return;
-        if (inWater) return;
+        //if (inWater) return;
         if (_timeSinceGrounded > _coyoteTime) return;
 
         //GetComponent<Animator>().Play("Jumping", -1, 0);

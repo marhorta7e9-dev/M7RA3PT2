@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     public GameObject _pauseMenu;
     public bool isPaused = false;
     public GameObject[] GOitems;
-    public ScriptableObjectScript _playerSO;
+    public PlayerScriptableObject _playerSO;
 
     
 
     void Start()
     {
+        Debug.Log("La vida de " + _playerSO.nom + " es: " + _playerSO.vida);
+
         _pauseMenu.SetActive(false);
     }
 
@@ -38,13 +40,13 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        //PlayerPrefs.DeleteAll(); // Elimina todos los datos guardados en PlayerPrefs. Útil para pruebas, pero ten cuidado al usarlo en producción.
         if (GameManager.gamemanager != null && GameManager.gamemanager != this) //Si ja existeix un GameManager i no és este, destruïm este.
         {
             Destroy(gamemanager);
         }
         else
         {
+            PlayerPrefs.DeleteAll(); // Elimina tots els datos guardados en PlayerPrefs. Útil para pruebas, pero ten cuidado al usarlo en producción.
             GameManager.gamemanager = this;
             DontDestroyOnLoad(gamemanager);
 
@@ -85,5 +87,9 @@ public class GameManager : MonoBehaviour
     {
         Items[id].sprite = sprite;
         GOitems[id].SetActive(true);
+    }
+    public void LivesCollected(int i)
+    {
+        _playerSO.vida += i;
     }
 }

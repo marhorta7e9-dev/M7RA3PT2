@@ -12,17 +12,17 @@ public class wineCollector : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<ICollectable>(out ICollectable icoll))//comproba si l'objecte que ha entrat en contacte amb el jugador es un item colleccionable, si es així, comença el codi de colleccionar.
+        if (other.gameObject.TryGetComponent<ICollectable>(out ICollectable icoll)) // Comproba si l'objecte que ha entrat en contacte amb el jugador es un item col·leccionable
         {
             icoll.OnCollected();
 
-        }
-        if (icoll is Item) //Si el item colleccionable es un Item, comença el codi de col·leccionar l'Item.
-        {
-          _animator.SetTrigger("Collected");
-            _animator.SetLayerWeight(1, 1);
-            Camera.main.GetComponent<CinemachineBrain>().enabled = true;
-            GetComponent<PlayerController2526>().canMove = false;
+            if (icoll is Item) // Si el item col·leccionable es un Item, comença el codi de col·leccionar l'Item
+            {
+                _animator.SetTrigger("Collected");
+                _animator.SetLayerWeight(1, 1);
+                Camera.main.GetComponent<CinemachineBrain>().enabled = true;
+                GetComponent<PlayerController2526>().canMove = false;
+            }
         }
     }
 }

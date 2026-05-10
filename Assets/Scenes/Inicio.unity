@@ -236,6 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::anarAlJoc
   credits: {fileID: 378933447}
+  boto1: {fileID: 455224902}
+  boto2: {fileID: 2069515289}
 --- !u!1 &378933447
 GameObject:
   m_ObjectHideFlags: 0

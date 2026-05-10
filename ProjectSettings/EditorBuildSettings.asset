@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/M7PT2.unity
     guid: 9e69c5de917d04ec7b49421fa44095b0
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: f4c049a4f512a4bc0a5a9bd9c1da5985
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

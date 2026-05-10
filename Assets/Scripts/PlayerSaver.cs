@@ -10,8 +10,6 @@ public class PlayerSaver : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll(); // Elimina tots els datos guardats en PlayerPrefs. Útil per a proves.
-
         // Només carreguem la posició si hi ha un savepoint activat
         if (PlayerPrefs.HasKey("playerPosX") && PlayerPrefs.HasKey("playerPosY") && PlayerPrefs.HasKey("playerPosZ"))
         {
