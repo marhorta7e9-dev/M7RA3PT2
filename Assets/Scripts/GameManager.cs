@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.DeleteAll(); // Elimina tots els datos guardados en PlayerPrefs. Útil para pruebas, pero ten cuidado al usarlo en producción.
+            //PlayerPrefs.DeleteAll(); // Elimina tots els datos guardados en PlayerPrefs. Útil para pruebas, pero ten cuidado al usarlo en producción.
             GameManager.gamemanager = this;
             DontDestroyOnLoad(gamemanager);
 

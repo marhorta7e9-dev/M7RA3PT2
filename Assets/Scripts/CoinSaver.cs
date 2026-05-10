@@ -13,19 +13,19 @@ public class CoinSaver : MonoBehaviour
         // Si aquesta moneda ja s'ha recollit en una partida anterior, la desactivem
         if (PlayerPrefs.HasKey("Coins" + ID) && PlayerPrefs.GetInt("Coins" + ID) == 1)
         {
-            gameObject.SetActive(false); // Amaguem la moneda, ja estava recollida
+            //gameObject.SetActive(false); // Amaguem la moneda, ja estava recollida
         }
         if (PlayerPrefs.HasKey("Orbs" + ID) && PlayerPrefs.GetInt("Orbs" + ID) == 1)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
         if (PlayerPrefs.HasKey("Wine" + ID) && PlayerPrefs.GetInt("Wine" + ID) == 1)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
        if (PlayerPrefs.HasKey("Lives" + ID) && PlayerPrefs.GetInt("Lives" + ID) == 1)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 
